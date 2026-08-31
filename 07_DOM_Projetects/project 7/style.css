@@ -1,9 +1,150 @@
-body{
-    background-color: black;
-    color: white;
-    font-size: 25px;
+/* Global Styling & Mystical Dark Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #e0e0e0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
+}
+
+/* Main Form Container */
+.astrology-container {
+    background: rgba(20, 20, 35, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Header */
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-section h1 {
+    font-family: 'Cinzel', serif;
+    color: #f39c12;
+    font-size: 26px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.header-section p {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+/* Form Layout */
+.astro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #f39c12;
+    margin-bottom: -10px;
+}
+
+label {
+    font-size: 13px;
+    color: #cfcfcf;
+}
+
+/* Text Inputs */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+input:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.3);
+}
+
+/* DOB Grid */
+.dob-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Cinzel', serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+}
+
+/* Output Box Styling */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed #f39c12;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.result-box h3 {
+    color: #f39c12;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 12px;
+    font-size: 18px;
+    text-align: center;
 }

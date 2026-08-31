@@ -1,15 +1,27 @@
-const quotes = [
-    "money cant buy happiness",
-    "to earn money u need to study",
-    "hardwork will give u freedom",
-    "status dont matter",
-    "happiness depends on mindset",
-    "people dont think about your money",
-    "status is more important then money"
-]
-const h1 = document.querySelector("h1");
-const btn = document.querySelector("#btn");
-btn.addEventListener("click",()=> {
-    const index = Math.floor(Math.random()*6);
-    h1.textContent=quotes[index];
+const form = document.querySelector('form');
+const answer= {
+    q1: "Sachin Tendulkar",
+    q2: "West Indies",
+    q3: "Sachin Tendulkar",
+    q4: "264",
+    q5: "Muttiah Muralitharan"
+}
+
+form.addEventListener("submit",(evt)=> {
+     evt.preventDefault();
+
+     const data = new FormData(form);
+     let finalscore = 0;
+
+
+     for( let [name,value] of data.entries()){
+        if(answer[name]==value)
+            finalscore++;
+     };
+    
+     document.querySelector("#out").textContent = `Your score is ${finalscore} out of 5`
+
+
+
+     form.reset();
 })
