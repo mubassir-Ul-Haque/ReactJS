@@ -1,0 +1,15 @@
+import { useState } from "react";
+
+function Counter(){
+    const [count,setCount] = useState(0);
+    console.log("COUNT")
+  return (
+    <>
+      <h1>Counter Application of mne:{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </>
+  )
+}
+
+export default Counter;
