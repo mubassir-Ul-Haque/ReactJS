@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Sum from './Sum.jsx'
+import SuM from './Sum.jsx'
 function App() {
   const [count, setCount] = useState(0);
   const [number, setNumber] = useState(0);
@@ -15,7 +15,7 @@ function App() {
       <button onClick={() => setCount(count - 1)}>Decrease</button>
       <h3>your total sum</h3>
       <button onClick={() => setNumber(number + 10)}>SUM</button>
-      <Sum number={number}></Sum>
+      <SuM number={number}></SuM>
     </>
   )
 
